@@ -5,9 +5,11 @@
     "moduleResolution": "Node",   // 使用 Node.js 风格的模块解析
     "declaration": true,          // 生成类型声明文件
     "declarationMap": true,       // 生成声明文件的映射
+    "declarationDir": "./dist/types",  // 类型声明文件输出目录
     "outDir": "./dist",           // 输出目录
     "strict": true,               // 开启严格模式
-    "esModuleInterop": true       // 允许与 CommonJS 模块兼容
+    "esModuleInterop": true,       // 允许与 CommonJS 模块兼容
+    "typeRoots": ["./dist/types"]
   },
   "include": ["src/**/*"],         // 包含所有的 .ts 文件
   "exclude": ["node_modules"]      // 排除 node_modules 目录
