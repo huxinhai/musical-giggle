@@ -9,7 +9,6 @@ Thumbs.db  # Windows
 *.log
 
 # 忽略构建输出文件
-dist/
 build/
 
 # 忽略环境变量文件

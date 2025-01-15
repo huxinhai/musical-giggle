@@ -6,7 +6,7 @@
     "declaration": true,           // 生成类型声明文件
     "declarationMap": true,        // 生成声明映射
     "outDir": "./dist",            // 输出目录
-    "strict": true                 // 开启严格模式
+    "strict": true,                 // 开启严格模式
   },
   "include": ["src/**/*"]          // 需要编译的文件夹
 }
