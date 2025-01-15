@@ -4,20 +4,55 @@ const path = require('path');
 const srcDir = path.resolve(__dirname, 'src'); // 源代码目录
 const indexFilePath = path.join(srcDir, 'index.ts'); // 生成的 index.ts 文件路径
 
-// 读取 src 目录下的所有文件
-fs.readdir(srcDir, (err, files) => {
+// 递归读取目录中的所有 .ts 文件
+function readDirRecursive(dir, callback) {
+    fs.readdir(dir, (err, files) => {
+        if (err) {
+            console.error('无法读取目录', err);
+            return;
+        }
+
+        let pending = files.length;
+        if (!pending) return callback(null, []);
+
+        const results = [];
+
+        files.forEach(file => {
+            const filePath = path.join(dir, file);
+            fs.stat(filePath, (err, stats) => {
+                if (err) {
+                    console.error('无法获取文件状态', err);
+                    return callback(err);
+                }
+
+                if (stats.isDirectory()) {
+                    readDirRecursive(filePath, (err, subResults) => {
+                        if (err) return callback(err);
+                        results.push(...subResults);
+                        if (!--pending) callback(null, results);
+                    });
+                } else if (file.endsWith('.ts') && file !== 'index.ts') {
+                    results.push(filePath);
+                    if (!--pending) callback(null, results);
+                } else if (!--pending) callback(null, results);
+            });
+        });
+    });
+}
+
+// 生成 index.ts 文件
+readDirRecursive(srcDir, (err, tsFiles) => {
     if (err) {
         console.error('无法读取目录', err);
         return;
     }
 
-    // 过滤出所有的 .ts 文件，排除 index.ts 本身
-    const tsFiles = files.filter(file => file.endsWith('.ts') && file !== 'index.ts');
-
     // 构造每个文件的 export 语句
     const exports = tsFiles.map(file => {
-        const moduleName = path.basename(file, '.ts');
-        return `export * from './${moduleName}';`;
+        const relativePath = path.relative(srcDir, file).replace(/\.ts$/, '');
+        // 使用正斜杠替换反斜杠
+        const normalizedPath = relativePath.replace(/\\/g, '/');
+        return `export * from './${normalizedPath}';`;
     });
 
     // 将生成的 export 语句写入 index.ts 文件
