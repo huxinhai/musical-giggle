@@ -1,0 +1,19 @@
+# 忽略 node_modules 文件夹
+node_modules/
+
+# 忽略操作系统生成的文件
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# 忽略日志文件
+*.log
+
+# 忽略构建输出文件
+dist/
+build/
+
+# 忽略环境变量文件
+.env
+.idea
+
+pnpm-lock.yaml

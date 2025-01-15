@@ -1,0 +1,4 @@
+# .npmignore 文件内容
+src/
+tests/
+*.ts
