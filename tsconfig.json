@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "declaration": true,           // 生成类型声明文件
-    "declarationMap": true,        // 生成声明映射
-    "outDir": "./dist",            // 输出目录
-    "strict": true,                 // 开启严格模式
+    "target": "ESNext",           // 编译目标 ECMAScript 版本
+    "module": "ESNext",           // 使用 ES6 模块系统
+    "moduleResolution": "Node",   // 使用 Node.js 风格的模块解析
+    "declaration": true,          // 生成类型声明文件
+    "declarationMap": true,       // 生成声明文件的映射
+    "outDir": "./dist",           // 输出目录
+    "strict": true,               // 开启严格模式
+    "esModuleInterop": true       // 允许与 CommonJS 模块兼容
   },
-  "include": ["src/**/*"]          // 需要编译的文件夹
+  "include": ["src/**/*"],         // 包含所有的 .ts 文件
+  "exclude": ["node_modules"]      // 排除 node_modules 目录
 }
