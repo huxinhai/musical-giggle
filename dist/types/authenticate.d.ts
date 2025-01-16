@@ -1,5 +1,5 @@
-import { ApiResponse } from "./global";
-export interface authenticateResponse {
+import type { ApiResponse, userId } from "./global";
+export interface authenticateResponse extends userId {
     remain: number;
     username: string;
     role: string;
