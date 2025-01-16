@@ -1,8 +1,8 @@
-import {ApiResponse} from "./global";
+import type {ApiResponse, userId} from "./global";
 import {post} from "./http/http";
 
 
-export interface authenticateResponse {
+export interface authenticateResponse extends userId{
     remain: number
     username: string
     role: string
