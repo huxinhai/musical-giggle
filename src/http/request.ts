@@ -1,11 +1,22 @@
 import axios, { type AxiosResponse } from 'axios';
 import type { AxiosInstance } from 'axios';
 
+type Fn = () => string | Promise<string>
+
+function toPromise(fn: Fn): Promise<string> {
+    const result = fn()
+
+    // 如果返回值不是 Promise，则用 Promise.resolve() 包装
+    return result instanceof Promise ? result : Promise.resolve(result)
+}
+
+
 export class Request {
     public static axiosInstance: AxiosInstance
-    public static getToken:() => string
+    public static getToken:Promise<string>
+    public static UnauthorizedCb?:() => void
 
-    public static init(baseURL:string,getToken:() => string) {
+    public static init(baseURL:string,getToken:Fn,UnauthorizedCb?:() => void) {
         this.axiosInstance = axios.create({
             baseURL,
             timeout: 60000,
@@ -15,16 +26,17 @@ export class Request {
             },
         });
         this.initInterceptors()
-        this.getToken = getToken
+        this.UnauthorizedCb = UnauthorizedCb
+        this.getToken = toPromise(getToken)
         return axios;
     }
 
     private static initInterceptors() {
         this.axiosInstance.interceptors.request.use(
-            (config) => {
+            async (config) => {
                 // config.data = qs.stringify(config.data)
                 // console.log(config,'@')
-                config.headers['token'] = this.getToken() || ''
+                config.headers['token'] = await this.getToken || ''
                 return config
             },
             (error) => {
@@ -43,6 +55,7 @@ export class Request {
             },
             (error) => {
                 if (error.response.statusText === 'Unauthorized') {
+                    this.UnauthorizedCb?.()
                     // const t_data = getToken();
                     // sendLog({
                     //   type: 'error',
