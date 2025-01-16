@@ -26,8 +26,9 @@ export interface UserInfoResponse {
 /**
  * 获取用户信息
  * @param data - 包含电话号码的对象
+ * @param isApi - 是否使用 API
  * @param data.phone - 用户的电话号码
  * @returns
  */
-export const getUserInfo = (data: { phone: string }) =>
-    post<ApiResponse<UserInfoResponse>>('/api/userService/getUserInfo', data)
+export const getUserInfo = (data: { phone: string },isApi = !0) =>
+    post<ApiResponse<UserInfoResponse>>(`${isApi ? '/api' : ''}/userService/getUserInfo`, data)

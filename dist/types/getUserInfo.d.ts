@@ -21,10 +21,11 @@ export interface UserInfoResponse {
 /**
  * 获取用户信息
  * @param data - 包含电话号码的对象
+ * @param isApi - 是否使用 API
  * @param data.phone - 用户的电话号码
  * @returns
  */
 export declare const getUserInfo: (data: {
     phone: string;
-}) => Promise<ApiResponse<UserInfoResponse>>;
+}, isApi?: boolean) => Promise<ApiResponse<UserInfoResponse>>;
 //# sourceMappingURL=getUserInfo.d.ts.map
