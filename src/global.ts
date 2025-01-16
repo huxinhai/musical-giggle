@@ -3,3 +3,8 @@ export interface ApiResponse<T> {
   message: string // 返回的消息
   data: T
 }
+
+export interface userId{
+  userId: string | number
+}
+

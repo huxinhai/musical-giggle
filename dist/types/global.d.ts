@@ -3,4 +3,7 @@ export interface ApiResponse<T> {
     message: string;
     data: T;
 }
+export interface userId {
+    userId: string | number;
+}
 //# sourceMappingURL=global.d.ts.map

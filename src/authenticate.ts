@@ -16,6 +16,7 @@ export interface authenticateResponse {
 /**
  * 登录
  * @param data - 认证所需的数据对象
+ * @param isApi - 是否使用添加api前缀，默认为 true
  * @param data.code - 验证码或验证码数字
  * @param data.phone - 用户电话号码或电话数字
  * @param data.src - 来源，默认为 'default'
@@ -29,5 +30,5 @@ export const authenticate = (data: {
     src: 'default'
     pathParam: ''
     utdid?: string
-}) =>
-    post<ApiResponse<authenticateResponse>>('/api/userService/authenticate', data)
+},isApi = !0) =>
+    post<ApiResponse<authenticateResponse>>(`${isApi ? '/api' : ''}/userService/authenticate`, data)
