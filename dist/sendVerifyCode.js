@@ -12,7 +12,7 @@ import { post } from "./http/http";
 export const sendVerifyCode = async (data, cb) => {
     if (!data?.phone) {
         cb?.();
-        return { status: false };
+        return { status: false, message: '不能为空' };
     }
     return await post('/userService/sendVerifyCode', data);
 };

@@ -17,6 +17,7 @@ interface SendVerifyCodeData {
  */
 export declare const sendVerifyCode: (data: SendVerifyCodeData, cb?: () => void) => Promise<ApiResponse<true> | {
     status: boolean;
+    message: string;
 }>;
 export {};
 //# sourceMappingURL=sendVerifyCode.d.ts.map

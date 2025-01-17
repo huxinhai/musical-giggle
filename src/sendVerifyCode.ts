@@ -21,7 +21,7 @@ interface SendVerifyCodeData {
 export const sendVerifyCode = async (data:SendVerifyCodeData,cb?:()=>void) => {
     if (!data?.phone) {
         cb?.()
-        return {status: false, message: '请输入手机号'};
+        return {status: false, message: '不能为空'};
     }
     return await post<ApiResponse<true>>('/userService/sendVerifyCode', data);
 }
