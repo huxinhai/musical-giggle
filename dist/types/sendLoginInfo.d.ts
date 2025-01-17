@@ -12,13 +12,7 @@ import { ApiResponse } from "./global";
  */
 export interface sendLoginInfoData {
     userId: string;
-    loginInfo: {
-        candidateType: string;
-        source: string;
-        workingYear: string;
-        grade: string;
-        school: string;
-    };
+    loginInfo: object;
 }
 /**
  * 发送登录信息

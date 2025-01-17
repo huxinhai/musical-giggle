@@ -14,13 +14,14 @@ import {ApiResponse} from "./global";
  */
 export interface sendLoginInfoData {
     userId: string
-    loginInfo: {
-        candidateType: string
-        source: string
-        workingYear: string
-        grade: string
-        school: string
-    }
+    // loginInfo: {
+    //     candidateType: string
+    //     source: string
+    //     workingYear: string
+    //     grade: string
+    //     school: string
+    // }
+    loginInfo: object
 }
 
 /**

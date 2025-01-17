@@ -26,5 +26,5 @@ export interface getHpLunboPicsResponse {
 export const getHpLunboPics = (data?:{type:'appHp' | 'appLogin'}): Promise<ApiResponse<getHpLunboPicsResponse[]>> =>
     post<ApiResponse<getHpLunboPicsResponse[]>>(
         '/api/userService/getHpLunboPics',
-        data
+        data || {}
     )
