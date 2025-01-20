@@ -6,5 +6,5 @@ export interface getUserGoodCommentsResponse {
     url: string;
     info: null | any;
 }
-export declare const getUserGoodComments: (data?: {}) => Promise<ApiResponse<any>>;
+export declare const getUserGoodComments: (data?: {}) => Promise<ApiResponse<getUserGoodCommentsResponse[]>>;
 //# sourceMappingURL=getUserGoodComments.d.ts.map

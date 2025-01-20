@@ -13,5 +13,5 @@ export interface getUserGoodCommentsResponse {
 /*
 *   获取用户好评
 *  */
-export const getUserGoodComments = (data = {}): Promise<ApiResponse<any>> =>
+export const getUserGoodComments = (data = {}): Promise<ApiResponse<getUserGoodCommentsResponse[]>> =>
     post<ApiResponse<getUserGoodCommentsResponse[]>>('/userService/getUserGoodComments',data)
