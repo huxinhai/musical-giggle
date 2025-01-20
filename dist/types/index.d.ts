@@ -7,8 +7,8 @@ export * from './getAppReviewStatus';
 export * from './getAPPVersion';
 export * from './getHpLunboPics';
 export * from './getLoginInfo';
-export * from './getNews';
 export * from './getPublicQuestion';
+export * from './getNews';
 export * from './getShareInfo';
 export * from './getUserComments';
 export * from './getUserGoodComments';
@@ -19,6 +19,6 @@ export * from './queryQuestion';
 export * from './sendLoginInfo';
 export * from './sendVerifyCode';
 export * from './utdLog';
-export * from './http/request';
 export * from './http/http';
+export * from './http/request';
 //# sourceMappingURL=index.d.ts.map
