@@ -5,14 +5,26 @@ import {addQuestionData} from "./addQuestion";
 /**
  * 查询问题响应数据类型
  * @interface queryQuestionResponse
- * @property {boolean} queryStatus - 查询状态，表示查询是否成功
- * @property {string} queryMessage - 查询消息，通常包含错误或成功的描述
- * @property {string} data - 查询的结果数据，可能是问题的内容或其他信息
  */
 export interface queryQuestionResponse {
-    queryStatus: boolean
-    queryMessage: string
-    data: string
+    id: number;
+    gmtCreate: string;
+    gmtModified: string;
+    userId: string;
+    examId: string;
+    questionId: string;
+    status: 'pending' | 'finished' | 'failed';
+    question: string;
+    answer: string;
+    imageUrl: string;
+    info: string | {
+        modelResultMap: {
+            [key: string]: {
+                result: string;
+                desc: string;
+            }
+        }
+    };
 }
 
 /**
