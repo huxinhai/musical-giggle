@@ -8,7 +8,7 @@ import { ApiResponse } from "./global";
  * @property {number} start - 请求的起始位置
  * @property {string | number} userId - 用户 ID，可以是字符串或数字
  */
-interface getPublicQuestionData {
+export interface getPublicQuestionData {
     companyId: -1;
     count: number;
     positionId: number;
@@ -21,7 +21,7 @@ interface getPublicQuestionData {
  * @property {number} totalCount - 问题的总数
  * @property {GetPublicQuestionResult[]} listResult - 问题结果列表
  */
-interface getPublicQuestionResponse {
+export interface getPublicQuestionResponse {
     totalCount: number;
     listResult: GetPublicQuestionResult[];
 }
@@ -55,5 +55,4 @@ export interface GetPublicQuestionResult {
  * @returns {Promise<ApiResponse<getPublicQuestionResponse>>} - 包含公共问题数据的响应结果
  */
 export declare const getPublicQuestion: (data: getPublicQuestionData) => Promise<ApiResponse<getPublicQuestionResponse>>;
-export {};
 //# sourceMappingURL=getPublicQuestion.d.ts.map

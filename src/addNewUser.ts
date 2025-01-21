@@ -5,7 +5,7 @@ import { post } from './http/http';
  * 用户注册请求参数接口
  * @interface UserData
  */
-interface UserData {
+export interface UserData {
   /** 用户手机号 */
   phone: string;
   /** 用户密码 */
@@ -16,7 +16,7 @@ interface UserData {
  * 用户注册响应数据接口
  * @interface UserResponse
  */
-interface UserResponse {
+export interface UserResponse {
   /** 创建时间 */
   gmtCreate: string;
   /** 修改时间 */
