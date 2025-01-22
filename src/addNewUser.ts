@@ -1,4 +1,5 @@
-import { ApiResponse } from './global';
+import type { UserInfo } from './getAllUserList';
+import type { ApiResponse } from './global';
 import { post } from './http/http';
 
 /**
@@ -38,5 +39,5 @@ export interface UserResponse {
  * @param {UserData} data - 用户注册信息
  * @returns {Promise<ApiResponse<UserResponse | null>>} 返回用户注册结果
  */
-export const addNewUser = (data: UserData): Promise<ApiResponse<UserResponse | null>> => 
-  post<ApiResponse<UserResponse | null>>('/userService/addNewUser', data);
+export const addNewUser = (data: UserData): Promise<ApiResponse<UserInfo | null>> => 
+  post<ApiResponse<UserInfo | null>>('/userService/addNewUser', data);

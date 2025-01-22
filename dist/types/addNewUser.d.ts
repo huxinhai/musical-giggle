@@ -1,4 +1,5 @@
-import { ApiResponse } from './global';
+import type { UserInfo } from './getAllUserList';
+import type { ApiResponse } from './global';
 /**
  * 用户注册请求参数接口
  * @interface UserData
@@ -34,5 +35,5 @@ export interface UserResponse {
  * @param {UserData} data - 用户注册信息
  * @returns {Promise<ApiResponse<UserResponse | null>>} 返回用户注册结果
  */
-export declare const addNewUser: (data: UserData) => Promise<ApiResponse<UserResponse | null>>;
+export declare const addNewUser: (data: UserData) => Promise<ApiResponse<UserInfo | null>>;
 //# sourceMappingURL=addNewUser.d.ts.map
