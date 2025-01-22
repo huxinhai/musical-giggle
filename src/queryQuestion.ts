@@ -13,7 +13,7 @@ export interface queryQuestionResponse {
     userId: string;
     examId: string;
     questionId: string;
-    status: 'pending' | 'finished' | 'failed';
+    status: 'parsing' | 'finished' | 'error';
     question: string;
     answer: string;
     imageUrl: string;
