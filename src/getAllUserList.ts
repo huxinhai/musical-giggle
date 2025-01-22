@@ -18,6 +18,8 @@ export interface UserInfo {
   src: string | null;
   /** 附加信息 */
   info: string;
+  /** 角色 */
+  role: 'admin' | 'user'
 }
 
 /** 用户列表响应接口 */
