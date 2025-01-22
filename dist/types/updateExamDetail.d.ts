@@ -1,6 +1,6 @@
 import { ApiResponse } from "./global";
 /** 考试详情更新参数接口 */
-export interface ExamDetailParams {
+export interface updateExamDetailParams {
     /** 问题ID */
     questionId: string;
     /** 问题内容 */
@@ -13,5 +13,5 @@ export interface ExamDetailParams {
  * @param data - 更新参数
  * @returns Promise<ApiResponse<boolean>> - 返回更新操作的结果
  */
-export declare const updateExamDetail: (data: ExamDetailParams) => Promise<ApiResponse<boolean>>;
+export declare const updateExamDetail: (data: updateExamDetailParams) => Promise<ApiResponse<boolean>>;
 //# sourceMappingURL=updateExamDetail.d.ts.map

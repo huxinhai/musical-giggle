@@ -31,7 +31,7 @@ export interface ExamListResponse {
     /** 总记录数 */
     total: number;
     /** 考试记录列表 */
-    list: ExamListItem[];
+    array: ExamListItem[];
 }
 /**
  * 获取考试列表
