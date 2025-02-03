@@ -23,8 +23,9 @@ export interface ExamRecord {
  *
  * @function launchExam
  * @param {string} data - 用户 ID
+ * @param {string} examType - 考试类型
  * @returns {Promise<ApiResponse<ExamRecord>>} - 返回考试记录的响应结果
  */
-export const launchExam = (data: userId): Promise<ApiResponse<ExamRecord>> =>
-    post<ApiResponse<ExamRecord>>('/userService/launchExam', data)
+export const launchExam = (data: userId, examType: string): Promise<ApiResponse<ExamRecord>> =>
+    post<ApiResponse<ExamRecord>>('/userService/launchExam', {data, examType})
 
