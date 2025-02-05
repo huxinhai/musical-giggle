@@ -8,7 +8,7 @@ interface getPQListRe {
 }
 export interface getPQListResponse {
     totalCount: number;
-    listResult: getPQListRe[];
+    data: getPQListRe[];
 }
 export declare const getPQList: (data: {
     pqId: string;

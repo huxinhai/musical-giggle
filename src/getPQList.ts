@@ -21,7 +21,7 @@ string
 }
 export interface getPQListResponse {
     totalCount: number
-    listResult: getPQListRe[]
+    data: getPQListRe[]
 }
 
 export const getPQList = (data:{pqId:string} & Pagination) => post<ApiResponse<getPQListResponse>>('/userService/getPQList',data)
