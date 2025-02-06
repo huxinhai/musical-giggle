@@ -17,6 +17,7 @@ export interface UserInfoResponse {
     src: string;
     abConfig: AbConfig;
     packageInfo: PackageInfo | null;
+    expTime: string;
 }
 /**
  * 获取用户信息
