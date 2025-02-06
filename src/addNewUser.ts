@@ -11,6 +11,8 @@ export interface UserData {
   phone: string;
   /** 用户密码 */
   password: string;
+  /** 有效天数 */
+  dayValid: number;
 }
 
 /**

@@ -9,6 +9,8 @@ export interface UserData {
     phone: string;
     /** 用户密码 */
     password: string;
+    /** 有效天数 */
+    dayValid: number;
 }
 /**
  * 用户注册响应数据接口
