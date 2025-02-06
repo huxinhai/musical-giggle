@@ -15,13 +15,7 @@ export interface ExamRecord {
     examId: string;
     message: string;
 }
-/**
- * 启动考试
- *
- * @function launchExam
- * @param {string} data - 用户 ID
- * @param {string} examType - 考试类型
- * @returns {Promise<ApiResponse<ExamRecord>>} - 返回考试记录的响应结果
- */
-export declare const launchExam: (data: userId, examType: string) => Promise<ApiResponse<ExamRecord>>;
+export declare const launchExam: (data: userId & {
+    examType: string;
+}) => Promise<ApiResponse<ExamRecord>>;
 //# sourceMappingURL=launchExam.d.ts.map
