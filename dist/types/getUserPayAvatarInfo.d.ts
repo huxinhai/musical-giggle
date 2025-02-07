@@ -20,7 +20,7 @@ export interface GetUserPayAvatarInfoResponse {
  * 获取用户支付头像信息
  * @description 获取用户支付场景下使用的头像信息
  * @param {object} data - 空对象参数
- * @returns {Promise<ApiResponse<GetUserPayAvatarInfoResponse[]>>} 返回包含头像信息的 Promise
+ * @returns {Promise<ApiResponse<GetUserPayAvatarInfoResponse>>} 返回包含头像信息的 Promise
  * @example
  * ```typescript
  * const response = await getUserPayAvatarInfo();
@@ -30,5 +30,5 @@ export interface GetUserPayAvatarInfoResponse {
  * }
  * ```
  */
-export declare const getUserPayAvatarInfo: (data?: object) => Promise<ApiResponse<GetUserPayAvatarInfoResponse[]>>;
+export declare const getUserPayAvatarInfo: (data?: object) => Promise<ApiResponse<GetUserPayAvatarInfoResponse>>;
 //# sourceMappingURL=getUserPayAvatarInfo.d.ts.map
