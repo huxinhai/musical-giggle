@@ -1,4 +1,4 @@
-import { ApiResponse } from "./global";
+import type { ApiResponse } from "./global";
 /**
  * 首页轮播图响应类型
  * @interface getHpLunboPicsResponse

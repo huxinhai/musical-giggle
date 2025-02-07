@@ -1,4 +1,4 @@
-import { ApiResponse } from "./global";
+import type { ApiResponse } from "./global";
 export interface AbConfig {
     mjExp: number;
     hpExp: number;

@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, {} from 'axios';
 function toPromise(fn) {
     const result = fn();
     // 如果返回值不是 Promise，则用 Promise.resolve() 包装

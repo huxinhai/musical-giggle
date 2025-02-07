@@ -1,4 +1,4 @@
-import { ApiResponse } from "./global";
+import type { ApiResponse } from "./global";
 /**
  * 登录信息请求参数类型
  * @interface sendLoginInfoData

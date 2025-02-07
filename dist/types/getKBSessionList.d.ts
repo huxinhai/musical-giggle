@@ -1,4 +1,4 @@
-import { ApiResponse, userId } from "./global";
+import type { ApiResponse, userId } from "./global";
 export interface getKBSessionListResponse {
     gmtModified: string;
     skey: string | null;

@@ -1,4 +1,4 @@
-import { ApiResponse } from "./global";
+import type { ApiResponse } from "./global";
 /**
  * 上传用户行为日志
  *

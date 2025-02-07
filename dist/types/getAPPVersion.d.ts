@@ -1,4 +1,4 @@
-import { ApiResponse } from "./global";
+import type { ApiResponse } from "./global";
 /**
  * 获取应用版本请求参数类型
  * @interface getAPPVerData

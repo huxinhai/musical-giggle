@@ -1,1 +1,1 @@
-{"version":3,"file":"getCodeLangInfo.d.ts","sourceRoot":"","sources":["../../src/getCodeLangInfo.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,UAAU,CAAC;AAGvC,MAAM,WAAW,oBAAoB;IACjC,QAAQ,EAAC,MAAM,CAAA;IACf,EAAE,EAAC,MAAM,CAAA;CACZ;AAED,eAAO,MAAM,eAAe,6DAAgG,CAAA"}
+{"version":3,"file":"getCodeLangInfo.d.ts","sourceRoot":"","sources":["../../src/getCodeLangInfo.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,UAAU,CAAC;AAG5C,MAAM,WAAW,oBAAoB;IACjC,QAAQ,EAAC,MAAM,CAAA;IACf,EAAE,EAAC,MAAM,CAAA;CACZ;AAED,eAAO,MAAM,eAAe,6DAAgG,CAAA"}

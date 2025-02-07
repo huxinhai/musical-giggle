@@ -1,4 +1,4 @@
-import { ApiResponse, Pagination } from "./global";
+import type { ApiResponse, Pagination } from "./global";
 /**
  * 考试详情项接口
  * @interface ExamDetailItem

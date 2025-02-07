@@ -1,4 +1,4 @@
-import { ApiResponse } from "./global";
+import type { ApiResponse } from "./global";
 /** 考试详情更新参数接口 */
 export interface updateExamDetailParams {
     /** 问题ID */

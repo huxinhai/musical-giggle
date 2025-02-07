@@ -1,4 +1,4 @@
-import { ApiResponse } from "./global";
+import type { ApiResponse } from "./global";
 /**
  * 用户支付头像信息响应接口
  * @interface GetUserPayAvatarInfoResponse

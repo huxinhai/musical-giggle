@@ -1,4 +1,4 @@
-import { ApiResponse } from "./global";
+import type { ApiResponse } from "./global";
 /**
  * 获取公告--需要分页数据的接口结果类型
  * @interface getNewsDataResult

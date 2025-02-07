@@ -1,4 +1,4 @@
-import { ApiResponse, userId } from "./global";
+import type { ApiResponse, userId } from "./global";
 /**
  * 折扣信息响应接口
  * @interface GetDiscountInfoV2Response

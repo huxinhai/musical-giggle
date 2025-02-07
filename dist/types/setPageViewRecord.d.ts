@@ -1,4 +1,4 @@
-import { ApiResponse, userId } from "./global";
+import type { ApiResponse, userId } from "./global";
 /**
  * 设置页面访问记录
  * @description 设置页面访问记录

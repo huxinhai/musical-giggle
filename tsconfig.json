@@ -12,8 +12,6 @@
     "typeRoots": ["./dist/types"],
     "skipLibCheck": true,
     "types": [],
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
     "verbatimModuleSyntax": true
   },
   "include": ["src/**/*"],         // 包含所有的 .ts 文件

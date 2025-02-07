@@ -1,4 +1,4 @@
-import { ApiResponse, Pagination } from "./global";
+import type { ApiResponse, Pagination } from "./global";
 interface getPQListRe {
     answer: string;
     gmtCreate: string;
