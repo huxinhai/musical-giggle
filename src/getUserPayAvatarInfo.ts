@@ -17,6 +17,11 @@ export interface GetUserPayAvatarInfoResponse {
      * @description 头像相关的描述文本
      */
     desc: string
+    /** 
+     * 高亮内容
+     * @description 高亮内容
+     */
+    highlightContent:string
 }
 
 /**

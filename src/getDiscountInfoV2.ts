@@ -22,6 +22,51 @@ export interface GetDiscountInfoV2Response {
      * @description 包含所有可用的折扣套餐信息
      */
     discountInfo: DiscountInfo[]
+    /** 
+     * 分享折扣比例
+     * @description 完成分享后的折扣比例
+     */
+    shareRatio: number
+
+    /** 
+     * 推广信息
+     * @description 推广信息
+     */
+    promotionInfo: string
+
+    /** 
+     * 单位价格
+     * @description 单位价格
+     */
+    unitPriceSet: UnitPriceSet
+}
+
+export interface UnitPriceSet {
+    /** 
+     * 单位价格
+     * @description 单位价格
+     */
+    UnitPrice: number,
+    /** 
+     * 提升单位价格
+     * @description 提升单位价格
+     */
+    BoostUnitPrice: number,
+    /** 
+     * 外国单位价格
+     * @description 外国单位价格
+     */
+    ForeignUnitPrice: number,
+    /** 
+     * 外国提升单位价格
+     * @description 外国提升单位价格
+     */
+    ForeignBoostUnitPrice: number,
+    /** 
+     * 书写单位价格
+     * @description 书写单位价格
+     */
+    WrittenUnitPrice: number
 }
 
 /**
@@ -72,6 +117,12 @@ export interface Equity {
      * @description 权益的详细说明，可能为空
      */
     description: string | null
+
+    /** 
+     * 图标URL
+     * @description 权益的图标URL
+     */
+    iconUrl: string
 }
 
 /**
