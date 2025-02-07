@@ -1,4 +1,4 @@
-import { ApiResponse, userId } from "./global";
+import type { ApiResponse, userId } from "./global";
 import { post } from "./http/http";
 
 /**

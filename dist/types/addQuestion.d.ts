@@ -1,4 +1,4 @@
-import { ApiResponse, userId } from "./global";
+import type { ApiResponse, userId } from "./global";
 /**
  * 添加问题请求参数类型
  * @interface addQuestionData

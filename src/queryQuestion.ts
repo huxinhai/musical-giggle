@@ -1,5 +1,5 @@
 import {post} from "./http/http";
-import {ApiResponse, userId} from "./global";
+import type {ApiResponse} from "./global";
 
 /**
  * 添加问题请求参数类型

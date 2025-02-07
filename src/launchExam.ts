@@ -1,5 +1,5 @@
 import {post} from "./http/http";
-import {ApiResponse, userId} from "./global";
+import type {ApiResponse, userId} from "./global";
 
 /**
  * 考试记录类型

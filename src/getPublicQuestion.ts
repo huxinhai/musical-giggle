@@ -1,5 +1,5 @@
 import {post} from "./http/http";
-import {ApiResponse} from "./global";
+import type {ApiResponse} from "./global";
 
 /**
  * 公共问题数据的请求参数

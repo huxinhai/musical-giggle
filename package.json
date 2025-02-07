@@ -7,8 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node generate-index.js && tsc",
+    "upload": "git add . && git commit -m update && git push",
     "release": "standard-version",
-    "tag": "git push --follow-tags"
+    "tag": "git push --follow-tags",
+    "upload-release": "pnpm run build && pnpm run upload &&  pnpm run release && pnpm run tag"
   },
   "exports": {
     "types": "./dist/types/index.d.ts",

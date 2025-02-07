@@ -1,5 +1,5 @@
 import {post} from "./http/http";
-import {ApiResponse} from "./global";
+import type {ApiResponse} from "./global";
 
 /**
  * 登录信息请求参数类型

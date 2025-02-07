@@ -1,5 +1,5 @@
 import {post} from "./http/http";
-import {ApiResponse} from "./global";
+import type {ApiResponse} from "./global";
 
 /**
  * 获取考试服务器状态

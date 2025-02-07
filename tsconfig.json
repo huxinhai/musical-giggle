@@ -9,7 +9,12 @@
     "outDir": "./dist",           // 输出目录
     "strict": true,               // 开启严格模式
     "esModuleInterop": true,       // 允许与 CommonJS 模块兼容
-    "typeRoots": ["./dist/types"]
+    "typeRoots": ["./dist/types"],
+    "skipLibCheck": true,
+    "types": [],
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true
   },
   "include": ["src/**/*"],         // 包含所有的 .ts 文件
   "exclude": ["node_modules"]      // 排除 node_modules 目录
