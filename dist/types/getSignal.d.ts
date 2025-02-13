@@ -3,6 +3,12 @@ import type { ApiResponse, Pagination } from "./global";
 /**
  * 获取信号的实时价格数据
  * @interface GetSignalRealTimePriceData
+ * @property {GetSignalTokenMetaInfo} meta - 代币元数据信息
+ * @property {GetSignalSocialInfo} social - 社交媒体信息
+ * @property {Object} market - 市场相关信息
+ * @property {string} market.pair - 交易对
+ * @property {number} market.price - 当前价格
+ * @property {number} market.market_cap - 市值
  */
 export interface GetSignalRealTimePriceData {
     meta: GetSignalTokenMetaInfo;
@@ -16,6 +22,9 @@ export interface GetSignalRealTimePriceData {
 /**
  * 获取信号的实时价格响应
  * @interface GetSignalRealTimePrice
+ * @property {number} code - 响应状态码
+ * @property {string} description - 响应描述
+ * @property {GetSignalRealTimePriceData} data - 实时价格数据
  */
 export interface GetSignalRealTimePrice {
     code: number;
@@ -172,6 +181,20 @@ export interface GetSignalMonitorData {
 /**
  * 获取信号的详细信息
  * @interface GetSignalDetail
+ * @property {number} id - 信号的唯一标识符
+ * @property {number} timestamp - 信号生成的时间戳
+ * @property {string} gmtCreate - 信号创建时间（GMT格式）
+ * @property {string} gmtModified - 信号最后修改时间（GMT格式）
+ * @property {string} signalId - 信号的字符串标识符
+ * @property {string} tokenAddress - 代币合约地址
+ * @property {GetSignalMetaInfo} metaInfo - 代币的元数据信息
+ * @property {GetSignalInfo} signalInfo - 信号的基本信息
+ * @property {GetSignalMetricInfo} metricInfo - 信号的市场指标信息
+ * @property {Record<string, any>} safeInfo - 安全相关信息
+ * @property {GetSignalSocialInfo} socialInfo - 社交媒体相关信息
+ * @property {string[]} tokenTags - 代币标签列表
+ * @property {GetSignalMeta} signalMeta - 信号的元数据
+ * @property {GetSignalMonitorData} monitorData - 信号的监控数据
  */
 export interface GetSignalDetail {
     id: number;
@@ -190,17 +213,31 @@ export interface GetSignalDetail {
     monitorData: GetSignalMonitorData;
 }
 /**
- * 获取信号的响应数据
+ * 获取信号列表的响应数据
  * @interface GetSignalResponse
+ * @property {GetSignalDetail[]} array - 信号详情列表
+ * @property {number} totalCount - 信号总数
  */
 export interface GetSignalResponse {
     array: GetSignalDetail[];
     totalCount: number;
 }
+/**
+ * 获取信号请求的响应数据
+ * @interface getSignalResponse
+ * @property {number} startTime - 开始时间戳
+ * @property {getProfitInfoStrategyCondition[]} strategyArray - 策略条件数组
+ */
 export interface getSignalResponse {
     startTime: number;
     strategyArray: getProfitInfoStrategyCondition[];
 }
+/**
+ * 获取信号请求的分页响应数据
+ * @interface getSignalResponsePage
+ * @extends {Pagination}
+ * @property {getProfitInfoStrategyCondition[]} strategyArray - 策略条件数组
+ */
 export interface getSignalResponsePage extends Pagination {
     strategyArray: getProfitInfoStrategyCondition[];
 }

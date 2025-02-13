@@ -58,4 +58,4 @@ export interface UpsertAlertUserRequest {
  * console.log(`更新时间: ${response.data.gmtModified}`);
  */
 export const upsertAlertUser = (data: UpsertAlertUserRequest): Promise<ApiResponse<UpsertAlertUserResponse>> =>
-    post<ApiResponse<UpsertAlertUserResponse>>('/dataService/upsertAlertUser', data)
+    post<ApiResponse<UpsertAlertUserResponse>>('/userService/upsertAlertUser', data)

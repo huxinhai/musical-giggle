@@ -62,5 +62,5 @@ export interface getProfitInfoStrategyConditionRequest {
  *
  * @throws {Error} 当网络请求失败时可能抛出错误
  */
-export declare const getProfitInfo: (data: getProfitInfoStrategyConditionRequest) => Promise<ApiResponse<getProfitInfoResponse[]>>;
+export declare const getProfitInfo: (data: getProfitInfoStrategyConditionRequest) => Promise<ApiResponse<getProfitInfoResponse>>;
 //# sourceMappingURL=getProfitInfo.d.ts.map

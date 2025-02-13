@@ -14,4 +14,4 @@ import { post } from "./http/http";
  * });
  * console.log(`更新时间: ${response.data.gmtModified}`);
  */
-export const upsertAlertUser = (data) => post('/dataService/upsertAlertUser', data);
+export const upsertAlertUser = (data) => post('/userService/upsertAlertUser', data);
