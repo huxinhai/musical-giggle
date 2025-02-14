@@ -34,6 +34,16 @@ export interface GetSignalRealTimePrice {
 /**
  * 获取信号的代币基础元数据
  * @interface GetSignalTokenMetaInfo
+ * @property {string} chain - 区块链网络
+ * @property {string} address - 代币合约地址
+ * @property {string} creator_address - 代币创建者地址
+ * @property {string} symbol - 代币符号
+ * @property {string} name - 代币名称
+ * @property {number} decimals - 代币精度
+ * @property {string} logo - 代币logo URL
+ * @property {string} launchpad - 发射台名称
+ * @property {string} launchpad_status - 发射台状态
+ * @property {number} creation_timestamp - 代币创建时间戳
  */
 export interface GetSignalTokenMetaInfo {
     chain: string;
@@ -50,6 +60,9 @@ export interface GetSignalTokenMetaInfo {
 /**
  * 获取信号的代币元数据
  * @interface GetSignalMetaInfo
+ * @extends {GetSignalTokenMetaInfo}
+ * @property {number} total_supply - 代币总供应量
+ * @property {GetSignalRealTimePrice} rtPrice - 实时价格信息
  */
 export interface GetSignalMetaInfo extends GetSignalTokenMetaInfo {
     total_supply: number;
@@ -58,6 +71,13 @@ export interface GetSignalMetaInfo extends GetSignalTokenMetaInfo {
 /**
  * 获取信号的社交媒体信息
  * @interface GetSignalSocialInfo
+ * @property {string} uri - 社交媒体统一资源标识符
+ * @property {string} logo - 项目logo URL
+ * @property {string} telegram - Telegram群组链接
+ * @property {string} discord - Discord服务器链接
+ * @property {string} website - 项目官网
+ * @property {string} description - 项目描述
+ * @property {string} twitter - Twitter账号链接
  */
 export interface GetSignalSocialInfo {
     uri: string;
@@ -71,6 +91,13 @@ export interface GetSignalSocialInfo {
 /**
  * 获取信号的信号信息
  * @interface GetSignalInfo
+ * @property {number} signal_count - 信号触发次数
+ * @property {number} first_time - 首次触发时间戳
+ * @property {number} first_price - 首次触发时价格
+ * @property {number} max_price - 历史最高价格
+ * @property {number} max_price_gain - 最大价格涨幅
+ * @property {string[]} signal_tags - 信号标签列表
+ * @property {string} token_level - 代币等级
  */
 export interface GetSignalInfo {
     signal_count: number;
@@ -84,6 +111,14 @@ export interface GetSignalInfo {
 /**
  * 获取信号的市场指标信息
  * @interface GetSignalMetricInfo
+ * @property {string} pair - 交易对
+ * @property {number} token_reserve - 代币储备量
+ * @property {number} price - 当前价格
+ * @property {number} liquidity - 流动性
+ * @property {number} volume_24h - 24小时交易量
+ * @property {number} market_cap - 市值
+ * @property {number} holder_count - 持有人数量
+ * @property {number} top10_position - 前10大持有者持仓占比
  */
 export interface GetSignalMetricInfo {
     pair: string;
@@ -98,6 +133,11 @@ export interface GetSignalMetricInfo {
 /**
  * 获取信号的策略信息
  * @interface GetSignalStrategyInfo
+ * @property {number} group_id - 策略组ID
+ * @property {string} group_name - 策略组名称
+ * @property {string} group_type - 策略组类型
+ * @property {number} strategy_id - 策略ID
+ * @property {number} user_id - 用户ID
  */
 export interface GetSignalStrategyInfo {
     group_id: number;
@@ -109,6 +149,11 @@ export interface GetSignalStrategyInfo {
 /**
  * 获取信号的元数据
  * @interface GetSignalMeta
+ * @property {number} create_time - 创建时间戳
+ * @property {boolean} deleted - 是否已删除
+ * @property {string} id - 唯一标识符
+ * @property {boolean} read - 是否已读
+ * @property {GetSignalStrategyInfo} strategy_info - 策略信息
  */
 export interface GetSignalMeta {
     create_time: number;
@@ -120,6 +165,15 @@ export interface GetSignalMeta {
 /**
  * 获取信号的钱包统计
  * @interface GetSignalWalletStat
+ * @property {string} alias - 钱包别名
+ * @property {string} amount - 交易金额
+ * @property {number} amount_origin - 原始交易金额
+ * @property {number} last_trade_time - 最后交易时间戳
+ * @property {string} price - 交易价格
+ * @property {string} token - 代币地址
+ * @property {string} token_symbol - 代币符号
+ * @property {string} volume - 交易量
+ * @property {string} wallet - 钱包地址
  */
 export interface GetSignalWalletStat {
     alias: string;
@@ -135,6 +189,22 @@ export interface GetSignalWalletStat {
 /**
  * 获取信号的代币交易统计
  * @interface GetSignalTokenTradingStat
+ * @property {number} fdv - 完全稀释估值
+ * @property {number} holders - 持有人数量
+ * @property {number} lastUpdateTime - 最后更新时间戳
+ * @property {number} liquidity - 流动性
+ * @property {number} mkt_cap - 市值
+ * @property {number} percent12h - 12小时价格变化百分比
+ * @property {number} percent1h - 1小时价格变化百分比
+ * @property {number} percent1m - 1分钟价格变化百分比
+ * @property {number} percent24h - 24小时价格变化百分比
+ * @property {number} percent5m - 5分钟价格变化百分比
+ * @property {number} volume_12h - 12小时交易量
+ * @property {number} volume_1h - 1小时交易量
+ * @property {number} volume_1minutes - 1分钟交易量
+ * @property {number} volume_24h - 24小时交易量
+ * @property {number} volume_5minutes - 5分钟交易量
+ * @property {number} volume_6h - 6小时交易量
  */
 export interface GetSignalTokenTradingStat {
     fdv: number;
@@ -157,6 +227,14 @@ export interface GetSignalTokenTradingStat {
 /**
  * 获取信号的监控记录数据
  * @interface GetSignalMonitorRecordData
+ * @property {string} chain - 区块链网络
+ * @property {number} strategy_id - 策略ID
+ * @property {string} swap - 交易所名称
+ * @property {string} token - 代币地址
+ * @property {string} token_symbol - 代币符号
+ * @property {GetSignalTokenTradingStat} token_trading_stat - 代币交易统计
+ * @property {number} user_id - 用户ID
+ * @property {GetSignalWalletStat[]} wallet_stats - 钱包统计列表
  */
 export interface GetSignalMonitorRecordData {
     chain: string;
@@ -171,6 +249,10 @@ export interface GetSignalMonitorRecordData {
 /**
  * 获取信号的监控数据
  * @interface GetSignalMonitorData
+ * @property {string} monitor_type - 监控类型
+ * @property {GetSignalMonitorRecordData} record_data - 监控记录数据
+ * @property {number} unix_time - Unix时间戳
+ * @property {string} version - 版本号
  */
 export interface GetSignalMonitorData {
     monitor_type: string;
