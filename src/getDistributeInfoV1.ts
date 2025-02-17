@@ -9,4 +9,4 @@ import { post } from "./http/http";
  * @returns {Promise<ApiResponse<string>>} 返回包含分发信息的Promise对象
  */
 export const getDistributeInfoV1 = (data: userId): Promise<ApiResponse<string>> =>
-    post<ApiResponse<string>>('/api/userService/getDistributeInfoV1', data)
+    post<ApiResponse<string>>('/userService/getDistributeInfoV1', data)

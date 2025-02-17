@@ -4,4 +4,4 @@ import { post } from "./http/http";
  * @param {userId} data - 用户ID参数
  * @returns {Promise<ApiResponse<string>>} 返回包含分发信息的Promise对象
  */
-export const getDistributeInfoV1 = (data) => post('/api/userService/getDistributeInfoV1', data);
+export const getDistributeInfoV1 = (data) => post('/userService/getDistributeInfoV1', data);
