@@ -122,6 +122,7 @@ interface TokenLatestInfo {
     poolSize: number;
     holders: number;
     lastUpdateTime: number;
+    holderCount: number;
 }
 /**
  * 获取代币最新信息的响应

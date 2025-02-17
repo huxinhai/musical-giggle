@@ -129,6 +129,7 @@ interface TokenLatestInfo {
     poolSize: number;
     holders: number;
     lastUpdateTime: number;
+    holderCount: number;
 }
 
 /**
