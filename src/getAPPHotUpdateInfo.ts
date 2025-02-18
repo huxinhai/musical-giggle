@@ -16,9 +16,14 @@ interface GetAPPHotUpdateInfoResponse {
     gmtCreate: string;
     gmtModified: string;
     info: {
-        version: number;
-        downloadAndroidUrl: string;
-        downloadIosUrl: string;
+        android: {
+            version: number;
+            downloadUrl: string;
+        },
+        ios: {
+            version: number;
+            downloadUrl: string;
+        }
     }
 }
 
@@ -27,13 +32,14 @@ interface GetAPPHotUpdateInfoResponse {
  * @async
  * @function getAPPHotUpdateInfo
  * @param {Record<string, any>} [data={}] - 请求参数（可选）
- * @returns {Promise<GetAPPHotUpdateInfoResponse>} 返回APP热更新信息
+ * @returns {Promise<ApiResponse<GetAPPHotUpdateInfoResponse>>} 返回包含 Android 和 iOS 版本信息的响应
  * 
  * @example
  * const response = await getAPPHotUpdateInfo();
- * console.log(`当前APP版本: ${response.version}`);
- * console.log(`安卓下载链接: ${response.downloadAndroidUrl}`);
- * console.log(`iOS下载链接: ${response.downloadIosUrl}`);
+ * console.log(`Android 版本: ${response.data.info.android.version}`);
+ * console.log(`Android 下载链接: ${response.data.info.android.downloadUrl}`);
+ * console.log(`iOS 版本: ${response.data.info.ios.version}`);
+ * console.log(`iOS 下载链接: ${response.data.info.ios.downloadUrl}`);
  */
 export const getAPPHotUpdateInfo = (data: Record<string, any> = {}): Promise<ApiResponse<GetAPPHotUpdateInfoResponse>> =>
     post<ApiResponse<GetAPPHotUpdateInfoResponse>>('/userService/getAPPHotUpdateInfo', data);
