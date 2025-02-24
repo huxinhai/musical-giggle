@@ -61,6 +61,10 @@ export interface GetSignalTokenMetaInfo {
     launchpad: string;
     launchpad_status: string;
     creation_timestamp: number;
+    rtPrice: number;
+    rtMarketCap: number;
+    rtPoolSize: number;
+    rtHolderCount: number;
 }
 
 /**
@@ -72,7 +76,6 @@ export interface GetSignalTokenMetaInfo {
  */
 export interface GetSignalMetaInfo extends GetSignalTokenMetaInfo {
     total_supply: number;
-    rtPrice: GetSignalRealTimePrice;
 }
 
 /**

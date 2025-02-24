@@ -56,6 +56,10 @@ export interface GetSignalTokenMetaInfo {
     launchpad: string;
     launchpad_status: string;
     creation_timestamp: number;
+    rtPrice: number;
+    rtMarketCap: number;
+    rtPoolSize: number;
+    rtHolderCount: number;
 }
 /**
  * 获取信号的代币元数据
@@ -66,7 +70,6 @@ export interface GetSignalTokenMetaInfo {
  */
 export interface GetSignalMetaInfo extends GetSignalTokenMetaInfo {
     total_supply: number;
-    rtPrice: GetSignalRealTimePrice;
 }
 /**
  * 获取信号的社交媒体信息
