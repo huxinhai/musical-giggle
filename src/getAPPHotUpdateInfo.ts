@@ -19,10 +19,12 @@ interface GetAPPHotUpdateInfoResponse {
         android: {
             version: number;
             downloadUrl: string;
+            isForce:boolean
         },
         ios: {
             version: number;
             downloadUrl: string;
+            isForce:boolean
         }
     }
 }
