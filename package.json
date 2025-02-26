@@ -10,7 +10,7 @@
     "upload": "git add . && git commit -m update && git push",
     "release": "standard-version",
     "tag": "git push --follow-tags",
-    "hxh": "pnpm run build && pnpm run upload &&  pnpm run release && pnpm run tag"
+    "hxh": "git pull && pnpm run build && pnpm run upload &&  pnpm run release && pnpm run tag"
   },
   "exports": {
     "types": "./dist/types/index.d.ts",
