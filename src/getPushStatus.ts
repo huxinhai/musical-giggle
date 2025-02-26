@@ -1,4 +1,4 @@
-import type { userId } from "./global";
+import type { ApiResponse, userId } from "./global";
 import { post } from "./http/http";
 
 
@@ -29,5 +29,5 @@ export interface PushStatusResponse {
  * });
  * console.log(result.active); // 'true'
  */
-export const getPushStatus = (data: userId & { pushId: string }): Promise<PushStatusResponse> =>
-    post('/userService/getPushStatus', data);
+export const getPushStatus = (data: userId & { pushId: string }): Promise<ApiResponse<PushStatusResponse>> =>
+    post<ApiResponse<PushStatusResponse>>('/userService/getPushStatus', data);

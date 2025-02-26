@@ -1,4 +1,4 @@
-import type { userId } from "./global";
+import type { ApiResponse, userId } from "./global";
 /**
  * 推送状态响应接口
  */
@@ -28,5 +28,5 @@ export interface PushStatusResponse {
  */
 export declare const getPushStatus: (data: userId & {
     pushId: string;
-}) => Promise<PushStatusResponse>;
+}) => Promise<ApiResponse<PushStatusResponse>>;
 //# sourceMappingURL=getPushStatus.d.ts.map
