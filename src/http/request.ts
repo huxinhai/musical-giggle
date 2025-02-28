@@ -13,10 +13,10 @@ function toPromise(fn: Fn): Promise<string> {
 
 export class Request {
     public static axiosInstance: AxiosInstance
-    public static getToken:Promise<string>
-    public static UnauthorizedCb?:() => void
+    public static getToken: Promise<string>
+    public static UnauthorizedCb?: Fn
 
-    public static init(baseURL:string,getToken:Fn,UnauthorizedCb?:() => void) {
+    public static init(baseURL: string, getToken: Fn, UnauthorizedCb?: Fn) {
         this.axiosInstance = axios.create({
             baseURL,
             timeout: 60000,
@@ -46,7 +46,7 @@ export class Request {
 
         this.axiosInstance.interceptors.response.use(
             (response: AxiosResponse) => {
-                const { statusText, status,data } = response
+                const { statusText, status, data } = response
                 if (statusText === 'OK' || status === 200) {
                     return data
                 } else {
