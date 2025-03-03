@@ -118,6 +118,7 @@ export interface GetSignalInfo {
     max_price_gain: number;
     signal_tags: string[];
     token_level: string;
+    price_gain?: number;
 }
 
 /**
@@ -200,6 +201,8 @@ export interface GetSignalWalletStat {
     token_symbol: string;
     volume: string;
     wallet: string;
+    address: string;
+    time:string
 }
 
 /**

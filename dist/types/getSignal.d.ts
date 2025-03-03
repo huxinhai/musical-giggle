@@ -110,6 +110,7 @@ export interface GetSignalInfo {
     max_price_gain: number;
     signal_tags: string[];
     token_level: string;
+    price_gain?: number;
 }
 /**
  * 获取信号的市场指标信息
@@ -188,6 +189,8 @@ export interface GetSignalWalletStat {
     token_symbol: string;
     volume: string;
     wallet: string;
+    address: string;
+    time: string;
 }
 /**
  * 获取信号的代币交易统计
