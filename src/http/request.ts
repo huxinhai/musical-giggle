@@ -37,6 +37,7 @@ export class Request {
                 // config.data = qs.stringify(config.data)
                 // console.log(config,'@')
                 config.headers['token'] = await this.getToken || ''
+                config.headers['Authorization'] = `Bearer ${await this.getToken}`
                 return config
             },
             (error) => {

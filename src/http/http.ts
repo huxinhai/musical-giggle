@@ -18,3 +18,23 @@ export const get = <T = any, D = any>(url: string, data?: D) => {
     if (data) config.params = data;
     return Request.axiosInstance<T>(config) as Promise<T>
 }
+
+export const put = <T = any, D = any>(url: string, data?: D) => {
+    const config: AxiosRequestConfig = {
+        method: 'PUT',
+        url,
+    };
+    if (data) config.data = data
+    return Request.axiosInstance<T>(config) as Promise<T>
+}
+
+export const del = <T = any, D = any>(url: string, data?: D) => {
+    const config: AxiosRequestConfig = {
+        method: 'DELETE',
+        url,
+    };
+    if (data) config.data = data
+    return Request.axiosInstance<T>(config) as Promise<T>
+}
+
+
