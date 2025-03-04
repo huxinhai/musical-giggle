@@ -52,7 +52,7 @@ export class Request {
                 // });
                 // window.localStorage.clear();
             }
-            return Promise.reject(error.data);
+            return Promise.reject(error.response.data);
         });
     }
 }
