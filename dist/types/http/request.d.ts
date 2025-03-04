@@ -6,6 +6,7 @@ export declare class Request {
     static UnauthorizedCb?: Fn;
     static init(baseURL: string, getToken: Fn, UnauthorizedCb?: Fn): import("axios").AxiosStatic;
     private static initInterceptors;
+    private static errorHandle;
 }
 export {};
 //# sourceMappingURL=request.d.ts.map
