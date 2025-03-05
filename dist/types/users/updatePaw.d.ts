@@ -1,5 +1,5 @@
 import type { ApiResponse } from "../global";
-export declare const updatePaw: (data: {
+export declare const updatePwd: (data: {
     account: string;
     pwd: string;
     code: string;

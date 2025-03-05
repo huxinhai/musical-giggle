@@ -26,6 +26,15 @@ export const put = (url, data) => {
         config.data = data;
     return Request.axiosInstance(config);
 };
+export const patch = (url, data) => {
+    const config = {
+        method: 'PATCH',
+        url,
+    };
+    if (data)
+        config.data = data;
+    return Request.axiosInstance(config);
+};
 export const del = (url, data) => {
     const config = {
         method: 'DELETE',

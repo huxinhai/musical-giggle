@@ -28,6 +28,15 @@ export const put = <T = any, D = any>(url: string, data?: D) => {
     return Request.axiosInstance<T>(config) as Promise<T>
 }
 
+export const patch = <T = any, D = any>(url: string, data?: D) => {
+    const config: AxiosRequestConfig = {
+        method: 'PATCH',
+        url,
+    };
+    if (data) config.data = data
+    return Request.axiosInstance<T>(config) as Promise<T>
+}
+
 export const del = <T = any, D = any>(url: string, data?: D) => {
     const config: AxiosRequestConfig = {
         method: 'DELETE',

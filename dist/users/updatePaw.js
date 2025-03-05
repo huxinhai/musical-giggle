@@ -1,5 +1,5 @@
-import { put } from "../http/http";
-export const updatePaw = (data) => {
+import { patch } from "../http/http";
+export const updatePwd = (data) => {
     const { account, pwd, code } = data;
-    return put(`/users/updatePwd/${account}`, { pwd, code });
+    return patch(`/users/updatePwd/${account}`, { pwd, code });
 };

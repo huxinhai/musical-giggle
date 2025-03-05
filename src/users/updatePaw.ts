@@ -1,12 +1,12 @@
 import type { ApiResponse } from "../global"
-import { put } from "../http/http"
+import { patch } from "../http/http"
 
 
-export const updatePaw = (data: {
+export const updatePwd = (data: {
     account: string,
     pwd: string,
     code: string
 }) => {
     const { account, pwd, code } = data
-    return put<ApiResponse<boolean>>(`/users/updatePwd/${account}`, { pwd, code })
+    return patch<ApiResponse<boolean>>(`/users/updatePwd/${account}`, { pwd, code })
 }
