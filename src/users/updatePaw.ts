@@ -8,5 +8,5 @@ export const updatePwd = (data: {
     code: string
 }) => {
     const { account, pwd, code } = data
-    return patch<ApiResponse<boolean>>(`/userService/h/users/updatePwd/${account}`, { pwd, code })
+    return patch<ApiResponse<boolean>>(`/userService/users/updatePwd/${account}`, { pwd, code })
 }

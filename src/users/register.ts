@@ -10,4 +10,4 @@ export const register = (data: {
     pwd: string,
     code: string,
     invitationCode?: string
-}) => post<ApiResponse<boolean>>('/userService/h/users/register', data)
+}) => post<ApiResponse<boolean>>('/userService/users/register', data)

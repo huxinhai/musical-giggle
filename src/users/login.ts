@@ -7,4 +7,4 @@ export const login = (data: {
     pwd: string,
 }) => post<ApiResponse<{
     access_token: string
-}>>('/userService/h/users/login', data)
+}>>('/userService/users/login', data)
