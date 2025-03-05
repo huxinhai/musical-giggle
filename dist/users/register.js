@@ -4,4 +4,4 @@ import { post } from "../http/http";
  * @param data 注册数据
  * @returns 注册结果
  */
-export const register = (data) => post('/userService/users/register', data);
+export const register = (data) => post('/userService/h/users/register', data);
