@@ -8,4 +8,5 @@ import { post } from "../http/http"
  */
 export const sendVerificationCode = (data: {
     account: string
+    type:number
 }) => post<ApiResponse<boolean>>('/users/sendVerificationCode', data)

@@ -6,5 +6,6 @@ import type { ApiResponse } from "../global";
  */
 export declare const sendVerificationCode: (data: {
     account: string;
+    type: number;
 }) => Promise<ApiResponse<boolean>>;
 //# sourceMappingURL=sendVerificationCode.d.ts.map
