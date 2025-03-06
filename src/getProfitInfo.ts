@@ -6,26 +6,46 @@ import type { ApiResponse } from './global'
 /**
  * 利润信息响应接口
  * @interface getProfitInfoResponse
- * @description 策略执行的利润统计信息
- * @property {number} totalSignalCount - 总信号数量
- * @property {number} winSignalCount - 盈利信号数量
- * @property {number} winRate - 胜率（范围：0-1）
- * @property {number} profitRate - 收益率（正数表示盈利，负数表示亏损）
+ * @description 策略执行的买入和卖出信号利润统计信息
+ * @property {number} buyTotalProfitRate - 买入信号总收益率
+ * @property {number} buyTotalSignalCount - 买入信号总数量
+ * @property {number} buyWinRate - 买入信号胜率（范围：0-1）
+ * @property {number} buyWinSignalCount - 盈利的买入信号数量
+ * @property {number} sellTotalProfitRate - 卖出信号总收益率
+ * @property {number} sellTotalSignalCount - 卖出信号总数量
+ * @property {number} sellWinRate - 卖出信号胜率（范围：0-1）
+ * @property {number} sellWinSignalCount - 盈利的卖出信号数量
  * 
  * @example
- * const profitInfo: ProfitInfo = {
- *   totalSignalCount: 2,
- *   winSignalCount: 0,
- *   winRate: 0.0,
- *   profitRate: -1.2103766291729423
+ * const profitInfo: getProfitInfoResponse = {
+ *   buyTotalProfitRate: -10.78868756882018,
+ *   buyTotalSignalCount: 33,
+ *   buyWinRate: 0.2727272727272727,
+ *   buyWinSignalCount: 9,
+ *   sellTotalProfitRate: 0.30378189107433984,
+ *   sellTotalSignalCount: 9,
+ *   sellWinRate: 0.6666666666666666,
+ *   sellWinSignalCount: 6
  * }
  */
 export interface getProfitInfoResponse {
-    totalSignalCount: number;
-    winSignalCount: number;
-    winRate: number;
-    profitRate: number;
-}
+    /** 买入信号总收益率 */
+    buyTotalProfitRate: number;
+    /** 买入信号总数量 */
+    buyTotalSignalCount: number;
+    /** 买入信号胜率（范围：0-1） */
+    buyWinRate: number;
+    /** 盈利的买入信号数量 */
+    buyWinSignalCount: number;
+    /** 卖出信号总收益率 */
+    sellTotalProfitRate: number;
+    /** 卖出信号总数量 */
+    sellTotalSignalCount: number;
+    /** 卖出信号胜率（范围：0-1） */
+    sellWinRate: number;
+    /** 盈利的卖出信号数量 */
+    sellWinSignalCount: number;
+  }
 
 
 /**

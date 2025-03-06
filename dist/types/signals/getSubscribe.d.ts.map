@@ -1,0 +1,1 @@
+{"version":3,"file":"getSubscribe.d.ts","sourceRoot":"","sources":["../../../src/signals/getSubscribe.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,WAAW,CAAC;AAI7C,MAAM,WAAW,oBAAoB;IACjC,EAAE,EAAE,MAAM,CAAC;IACX,aAAa,EAAE,GAAG,EAAE,CAAC;IACrB,QAAQ,EAAE,MAAM,CAAC;CACpB;AACD,eAAO,MAAM,YAAY,kDAC8C,CAAA"}
