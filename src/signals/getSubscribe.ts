@@ -8,4 +8,4 @@ export interface getSubscribeResponse {
     signalTo: number;
 }
 export const getSubscribe = () =>
-    get<ApiResponse<getSubscribeResponse>>('/userService/getSubscribe')
+    get<ApiResponse<getSubscribeResponse>>('/userService/signals/getSubscribe')
