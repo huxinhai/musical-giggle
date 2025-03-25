@@ -1,7 +1,7 @@
 import type { ApiResponse } from "../global";
 import { post } from "../http/http";
 
-export interface divinationCreateDivination {
+export interface divinationCreateDivinationData {
     sessionId: string;
     question: string;
     userId: string;
@@ -13,5 +13,5 @@ export interface divinationCreateDivination {
     minute: string;
 }
 
-export const divinationCreateDivination = (data: divinationCreateDivination) =>
-    post<ApiResponse<string>>('/DivinationService/divination/createDivination', data)
+export const divinationCreateDivination = (data: divinationCreateDivinationData) =>
+    post<ApiResponse<string>>('/divinationService/divination/createDivination', data)

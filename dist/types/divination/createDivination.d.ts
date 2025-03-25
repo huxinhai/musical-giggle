@@ -1,5 +1,5 @@
 import type { ApiResponse } from "../global";
-export interface divinationCreateDivination {
+export interface divinationCreateDivinationData {
     sessionId: string;
     question: string;
     userId: string;
@@ -10,5 +10,5 @@ export interface divinationCreateDivination {
     hour: string;
     minute: string;
 }
-export declare const divinationCreateDivination: (data: divinationCreateDivination) => Promise<ApiResponse<string>>;
+export declare const divinationCreateDivination: (data: divinationCreateDivinationData) => Promise<ApiResponse<string>>;
 //# sourceMappingURL=createDivination.d.ts.map

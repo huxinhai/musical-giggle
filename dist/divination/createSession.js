@@ -1,2 +1,2 @@
 import { post } from "../http/http";
-export const divinationCreateSession = (data) => post('/DivinationService/divination/createSession', data);
+export const divinationCreateSession = (data) => post('/divinationService/divination/createSession', data);
