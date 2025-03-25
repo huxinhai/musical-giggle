@@ -31,6 +31,10 @@ export interface launchInterviewResponse {
     msg: string;
     times: number;
     username: string;
+    serviceInstance: {
+        ip: string;
+        port: string;
+    }
 }
 
 /**

@@ -28,6 +28,10 @@ export interface launchInterviewResponse {
     msg: string;
     times: number;
     username: string;
+    serviceInstance: {
+        ip: string;
+        port: string;
+    };
 }
 /**
  * 启动面试会话
