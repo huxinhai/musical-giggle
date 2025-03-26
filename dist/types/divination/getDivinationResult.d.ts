@@ -1,5 +1,5 @@
-import type { ApiResponse } from "../global";
+import type { ApiResponse, Signal } from "../global";
 export declare const divinationGetDivinationResult: (data: {
     divinationId: string;
-}) => Promise<ApiResponse<any>>;
+} & Signal) => Promise<ApiResponse<any>>;
 //# sourceMappingURL=getDivinationResult.d.ts.map

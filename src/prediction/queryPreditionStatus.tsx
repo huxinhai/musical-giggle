@@ -1,7 +1,6 @@
 import type { ApiResponse } from "../global";
 import { post } from "../http/http";
 
-
 export interface predictionQueryPreditionStatusData {
     userId: string,
     predictionId: string

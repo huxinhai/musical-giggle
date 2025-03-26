@@ -1,1 +1,1 @@
-{"version":3,"file":"getDivinationResult.d.ts","sourceRoot":"","sources":["../../../src/divination/getDivinationResult.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,WAAW,CAAC;AAG7C,eAAO,MAAM,6BAA6B,SAAU;IAAE,YAAY,EAAE,MAAM,CAAA;CAAE,8BACS,CAAA"}
+{"version":3,"file":"getDivinationResult.d.ts","sourceRoot":"","sources":["../../../src/divination/getDivinationResult.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,EAAE,MAAM,WAAW,CAAC;AAGrD,eAAO,MAAM,6BAA6B,SAAU;IAAE,YAAY,EAAE,MAAM,CAAA;CAAE,GAAG,MAAM,8BACA,CAAA"}

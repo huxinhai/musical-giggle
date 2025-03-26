@@ -10,4 +10,7 @@ export interface Pagination {
     start: number;
     count: number;
 }
+export interface Signal {
+    signal?: AbortSignal;
+}
 //# sourceMappingURL=global.d.ts.map

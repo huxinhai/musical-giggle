@@ -4,11 +4,15 @@ export interface ApiResponse<T> {
   data: T
 }
 
-export interface userId{
+export interface userId {
   userId: string | number
 }
 
 export interface Pagination {
-  start:number
-  count:number
+  start: number
+  count: number
+}
+
+export interface Signal {
+  signal?: AbortSignal
 }
