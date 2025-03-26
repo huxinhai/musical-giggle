@@ -76,7 +76,7 @@ export class Request {
 
     private static errorHandle(res: any) {
         // 状态码判断
-        switch (res.status) {
+        switch (res?.status) {
             case 400:
                 console.error('错误请求')
                 break

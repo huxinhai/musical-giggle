@@ -59,7 +59,7 @@ export class Request {
     }
     static errorHandle(res) {
         // 状态码判断
-        switch (res.status) {
+        switch (res?.status) {
             case 400:
                 console.error('错误请求');
                 break;
