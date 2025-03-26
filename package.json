@@ -1,6 +1,6 @@
 {
   "name": "musical-giggle",
-  "version": "1.0.66",
+  "version": "1.0.67",
   "description": "axios基础封装",
   "main": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
