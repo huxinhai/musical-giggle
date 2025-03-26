@@ -12,4 +12,4 @@ export interface getHpTopicsResponse {
     info: string
     rankId: number
 }
-export const getHpTopics = (data = {}) => post<ApiResponse<getHpTopicsResponse[]>>('/tradeService/market/getHpTopics', data)
+export const getHpTopics = (data = {}) => post<ApiResponse<getHpTopicsResponse[]>>('/divinationService/market/getHpTopics', data)
