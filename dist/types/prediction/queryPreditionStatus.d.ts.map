@@ -1,0 +1,1 @@
+{"version":3,"file":"queryPreditionStatus.d.ts","sourceRoot":"","sources":["../../../src/prediction/queryPreditionStatus.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,WAAW,CAAC;AAI7C,MAAM,WAAW,kCAAkC;IAC/C,MAAM,EAAE,MAAM,CAAC;IACf,YAAY,EAAE,MAAM,CAAA;CACvB;AAED,eAAO,MAAM,8BAA8B,SAAgB,kCAAkC,8BACZ,CAAA"}
