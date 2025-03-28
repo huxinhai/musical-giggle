@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.73](https://github.com/huxinhai/musical-giggle/compare/v1.0.72...v1.0.73) (2025-03-28)
+
 ### [1.0.72](https://github.com/huxinhai/musical-giggle/compare/v1.0.71...v1.0.72) (2025-03-28)
 
 ### [1.0.71](https://github.com/huxinhai/musical-giggle/compare/v1.0.70...v1.0.71) (2025-03-26)
