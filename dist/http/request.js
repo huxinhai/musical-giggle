@@ -42,6 +42,11 @@ export class Request {
             //     return Promise.reject(data)
             // }
         }, (error) => {
+            if (axios.isCancel(error))
+                return Promise.reject({
+                    code: 90000,
+                    message: error.message || '请求已取消'
+                });
             Request.errorHandle(error.response);
             if (error.response?.statusText === 'Unauthorized') {
                 this.UnauthorizedCb?.();
