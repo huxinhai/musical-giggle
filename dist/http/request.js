@@ -43,7 +43,7 @@ export class Request {
             // }
         }, (error) => {
             Request.errorHandle(error.response);
-            if (error.response.statusText === 'Unauthorized') {
+            if (error.response?.statusText === 'Unauthorized') {
                 this.UnauthorizedCb?.();
                 // const t_data = getToken();
                 // sendLog({
@@ -54,7 +54,7 @@ export class Request {
                 // });
                 // window.localStorage.clear();
             }
-            return Promise.reject(error.response.data);
+            return Promise.reject(error.response?.data);
         });
     }
     static errorHandle(res) {
@@ -97,7 +97,7 @@ export class Request {
                 console.error('http版本不支持该请求');
                 break;
             default:
-                console.error(`连接错误${res.status}`);
+                console.error(`连接错误${res?.status}`);
         }
     }
 }
