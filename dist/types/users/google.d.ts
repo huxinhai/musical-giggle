@@ -1,5 +1,4 @@
 import type { ApiResponse } from "../global";
-export declare const getGoogleUserInfo: (code: string) => Promise<ApiResponse<{
-    access_token: string;
-}>>;
+import type { LoginResponse } from "./login";
+export declare const getGoogleUserInfo: (code: string) => Promise<ApiResponse<LoginResponse>>;
 //# sourceMappingURL=google.d.ts.map
