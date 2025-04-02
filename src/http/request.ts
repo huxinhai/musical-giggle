@@ -14,7 +14,7 @@ function toPromise(fn: Fn): Promise<string> {
 export class Request {
     public static axiosInstance: AxiosInstance
     public static getToken: Promise<string>
-    public static UnauthorizedCb?: Fn
+    public static UnauthorizedCb?: () => void
 
     public static init(baseURL: string, getToken: Fn, UnauthorizedCb?: Fn) {
         this.axiosInstance = axios.create({
