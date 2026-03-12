@@ -1,7 +1,7 @@
 import axios, { type AxiosResponse } from 'axios';
 import type { AxiosInstance } from 'axios';
 
-type Fn = () => string | Promise<string>
+type Fn = (data?: any) => string | Promise<string>
 
 function toPromise(fn: Fn): Promise<string> {
     const result = fn()
@@ -14,7 +14,7 @@ function toPromise(fn: Fn): Promise<string> {
 export class Request {
     public static axiosInstance: AxiosInstance
     public static getToken: Promise<string>
-    public static UnauthorizedCb?: () => void
+    public static UnauthorizedCb?: (data: any) => void
 
     public static init(baseURL: string, getToken: Fn, UnauthorizedCb?: Fn) {
         this.axiosInstance = axios.create({
@@ -65,7 +65,7 @@ export class Request {
 
                 Request.errorHandle(error.response)
                 if (error.response?.statusText === 'Unauthorized') {
-                    this.UnauthorizedCb?.()
+                    this.UnauthorizedCb?.(error.response?.data)
                     // const t_data = getToken();
                     // sendLog({
                     //   type: 'error',

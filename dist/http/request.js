@@ -49,7 +49,7 @@ export class Request {
                 });
             Request.errorHandle(error.response);
             if (error.response?.statusText === 'Unauthorized') {
-                this.UnauthorizedCb?.();
+                this.UnauthorizedCb?.(error.response?.data);
                 // const t_data = getToken();
                 // sendLog({
                 //   type: 'error',
