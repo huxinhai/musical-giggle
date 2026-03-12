@@ -48,7 +48,7 @@ export class Request {
                     message: error.message || '请求已取消'
                 });
             Request.errorHandle(error.response);
-            if (error.response?.statusText === 'Unauthorized') {
+            if (error.response?.status === 401) {
                 this.UnauthorizedCb?.(error.response?.data);
                 // const t_data = getToken();
                 // sendLog({
